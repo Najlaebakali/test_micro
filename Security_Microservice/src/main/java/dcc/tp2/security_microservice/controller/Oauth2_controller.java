@@ -33,7 +33,7 @@ public class Oauth2_controller {
     }
 
     @PostMapping("/login")
-        public Map<String, String> login( String username,  String password, String userType){
+    public Map<String, String> login( String username,  String password, String userType){
 
         String combined = username+":"+userType;
 
@@ -122,6 +122,7 @@ public class Oauth2_controller {
 
     }
 
-    }
+
+}
 
 
