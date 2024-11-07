@@ -48,9 +48,10 @@ public class UserDetailService implements UserDetailsService {
         }
 
 
-        if (user_infos.isEmpty()){
-            new UsernameNotFoundException("User not found with username: " + email);
-            System.out.println(" AUcun user");
+
+        if (user_infos.isEmpty()) {
+            System.out.println("Aucun user");
+            throw new UsernameNotFoundException("User not found with username: " + email);
         }
 
         Collection<GrantedAuthority> authorities = new ArrayList<>();
