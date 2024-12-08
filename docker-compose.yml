@@ -46,7 +46,7 @@ services:
       - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka #ou bien  ou lieu de ladresss ip on peut utiliser juste le nom http://labo_discorvey_service:8761/eureka
     networks:
       microservices-network:
-        ipv4_address: 192.168.100.20  # Assign the static IP here
+        ipv4_address: 192.168.100.20
     depends_on:
       labo_discovery-service:
         condition: service_healthy
@@ -62,7 +62,7 @@ services:
       interval: 10s
       retries: 4
     environment:
-      - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka #ou bien  ou lieu de ladresss ip on peut utiliser juste le nom http://labo_discorvey_service:8761/eureka
+      - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka
     depends_on:
       labo_discovery-service:
         condition: service_healthy
@@ -78,7 +78,7 @@ services:
       interval: 10s
       retries: 4
     environment:
-      - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka #ou bien  ou lieu de ladresss ip on peut utiliser juste le nom http://labo_discorvey_service:8761/eureka
+      - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka
       - CONFIG_SERVICE_URL=http://192.168.100.20:9999
     depends_on:
       labo_discovery-service:
@@ -96,7 +96,7 @@ services:
       interval: 10s
       retries: 4
     environment:
-      - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka #ou bien  ou lieu de ladresss ip on peut utiliser juste le nom http://labo_discorvey_service:8761/eureka
+      - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka
       - CONFIG_SERVICE_URL=http://192.168.100.20:9999
     depends_on:
       labo_discovery-service:
@@ -113,7 +113,7 @@ services:
       interval: 10s
       retries: 4
     environment:
-      - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka #ou bien  ou lieu de ladresss ip on peut utiliser juste le nom http://labo_discorvey_service:8761/eureka
+      - DISCOVERY_SERVICE_URL=http://192.168.100.10:8761/eureka
       - CONFIG_SERVICE_URL=http://192.168.100.20:9999
     depends_on:
       labo_discovery-service:
@@ -135,7 +135,7 @@ services:
       - CONFIG_SERVICE_URL=http://192.168.100.20:9999
     networks:
       microservices-network:
-        ipv4_address: 192.168.100.25  # Assign a unique IP here
+        ipv4_address: 192.168.100.25
     depends_on:
       labo_discovery-service:
         condition: service_healthy
@@ -146,4 +146,4 @@ networks:
     driver: bridge
     ipam:
       config:
-        - subnet: 192.168.100.0/24  # Subnet for the custom network
+        - subnet: 192.168.100.0/24

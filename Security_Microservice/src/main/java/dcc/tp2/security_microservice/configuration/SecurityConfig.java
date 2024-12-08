@@ -75,6 +75,7 @@ public class SecurityConfig {
         return httpSecurity
                 .sessionManagement(sess-> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .csrf(csrf -> csrf.disable())
+                .authorizeRequests(auth-> auth.requestMatchers("/actuator/**").permitAll())
                 .authorizeRequests(auth-> auth.requestMatchers("/login/**").permitAll())
                 .authorizeRequests(auth-> auth.requestMatchers("/RefreshToken/**").permitAll())
                 .authorizeRequests(auth -> auth.anyRequest().authenticated())
