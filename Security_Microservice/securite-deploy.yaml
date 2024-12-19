@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: config-service
-          image: labo_securite_images
+          image: najlaebk1/labo_securite_images
           imagePullPolicy: Never
           ports:
             - containerPort: 8787
