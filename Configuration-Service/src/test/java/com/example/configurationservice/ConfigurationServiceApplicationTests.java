@@ -1,10 +1,10 @@
-package dcc.tp2.enseignantservice;
+package com.example.configurationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EnseignantServiceApplicationTests {
+class ConfigurationServiceApplicationTests {
 
     @Test
     void contextLoads() {
